@@ -1,0 +1,54 @@
+<% include ./partials/header %>
+
+<%if (error) { %>
+    <p class="login-error"><%= error %><p>
+<% } %>
+
+    <div id="suMain" class="login">
+        <form id="signup" method="POST" action="/signup">
+            <h4>Create Your Free Account</h4>
+            <div class="form-field">
+                <label>Username</label>
+                <input id="handle" type="text" placeholder="Username" name="handle" />
+            </div>
+            <div class="form-field">
+                <label>Email</label>
+                <input id="signupEmail" type="email" placeholder="Email" name="email" />
+            </div>
+            <div class="form-field">
+                <label>Password</label>
+                <input id="pass1" type="password" placeholder="Password" name="password" />
+            </div>
+            <div class="form-field">
+                <label>Confirm</label>
+                <input id="pass2" type="password" placeholder="Confirm Password" name="password_confirm" />
+            </div>
+            <div class="form-button">
+                <input id="signupSubmit" disabled type="submit" />
+            </div>
+            <div class="form-footer">
+                Already use Cellout? <a href="javascript:void(0);" onClick="loginSwitch()">Log In</a>
+            </div>
+        </form>
+        <form id="login" method="POST" action="/login">
+            <h4>Log In</h4>
+            <div class="form-field">
+                <label>Email</label>
+                <input id="loginEmail" type="email" placeholder="Email" name="email" />
+            </div>
+            <div class="form-field">
+                <label>Password</label>
+                <input id="loginPass" type="password" placeholder="Password" name="password" />
+            </div>
+            <div class="form-button">
+                <input id="loginSubmit" type="submit" disabled />
+            </div>
+            <div class="form-footer">
+                New to Cellout? <a href="javascript:void(0);" onClick="loginSwitch()">Sign Up</a>
+            </div>
+        </form>
+    </div>
+
+<script src="/js/login.js"></script>
+
+<% include ./partials/footer %>

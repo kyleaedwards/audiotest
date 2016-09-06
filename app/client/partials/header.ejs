@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cellout | Jailbreak your creativity.</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css" />
+    <% styles = typeof styles !== 'undefined' ? styles : ['style'] %>
+    <% styles.forEach(function(style) { %>
+        <link rel="stylesheet" href="/css/<%= style %>.css" />
+    <% }) %>
+</head>
+
+<body class="<%= typeof bodyClass != 'undefined' ? bodyClass : '' %>">
+
+<header>
+    <h1>Cellout</h1>
+    <h2>Jailbreak your creativity.</h2>
+</header>
+
+<main id="mount">

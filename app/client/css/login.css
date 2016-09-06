@@ -1,0 +1,155 @@
+body.login {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+}
+
+body.login header {
+    padding: 40px 0;
+    text-align: center;
+}
+
+body.login header h1 {
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+    padding-right: 10px;
+    border-right: solid 1px #ddd;
+    margin-right: 7px;
+    color: #4a4a4a;
+    font-size: 30px;
+}
+
+body.login header h2 {
+    font-weight: 400;
+    color: #8cabdc;
+    font-size: 22px;
+    display: inline-block;
+    margin: 0;
+}
+
+#suMain {
+    width: 400px;
+    margin: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* background-color: rgba(255, 255, 255, 0.75); */
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.4s;
+}
+
+#suMain h4 {
+    margin: 0 0 25px;
+    text-align: center;
+    font-size: 24px;
+    color: #8cabdc;
+    font-weight: 300;
+}
+
+#suMain form {
+    padding: 25px;
+    width: 400px;
+    transition: all 0.4s;
+}
+
+#suMain.signup {
+    height: 425px;
+}
+
+#suMain.login {
+    height: 315px;
+}
+
+#suMain.signup #signup {
+    left: 0;
+    opacity: 1;
+}
+
+#suMain.login #signup {
+    left: 400px;
+    opacity: 0;
+}
+
+#suMain.login #login {
+    left: 0;
+    opacity: 1;
+}
+
+#suMain.signup #login {
+    left: 400px;
+    opacity: 0;
+}
+
+.form-field {
+    margin-bottom: 10px;
+    height: 45px;
+}
+
+.form-field label {
+    display: none;
+}
+
+.form-field input {
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    font-family: 'Ubuntu';
+    font-style: italic;
+    transition: all 0.4s;
+    background: none;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+}
+
+.form-button input {
+    font-size: 19px;
+    font-family: 'Ubuntu';
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f99;
+    color: #fff;
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-button input[disabled] {
+    background-color: #ccc;
+}
+
+.form-field input:focus {
+    border-color: #8cabdc;
+    box-shadow: 0 0 2px #8cabdc;
+}
+
+.form-footer {
+    margin-top: 15px;
+    background-color: #f0f0f0;
+    margin: 15px -25px 0;
+    padding: 25px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.login-error {
+    font-size: 12px;
+    text-align: center;
+    color: #900;
+}
+
+#signup {
+    position: absolute;
+    left: 0;
+}
+
+#login {
+    position: absolute;
+    left: 500px;
+}

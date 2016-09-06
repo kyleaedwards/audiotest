@@ -1,0 +1,33 @@
+body {
+    background-color: #f0f0f0;
+}
+
+header {
+    padding: 15px 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+header h1 {
+    font-weight: bold;
+    display: inline-block;
+    margin: 0;
+    padding-right: 10px;
+    border-right: solid 1px #ddd;
+    margin-right: 7px;
+    color: #4a4a4a;
+    font-size: 22px;
+}
+
+header h2 {
+    font-weight: 400;
+    color: #8cabdc;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+}
+
+#mount {
+    margin: 25px auto 0;
+    width: 960px;
+}

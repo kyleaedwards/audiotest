@@ -1,0 +1,17 @@
+{
+    "apps": [
+        {
+            "name": "app",
+            "script": "./index.js",
+            "watch": true,
+            "usePolling": true,
+            "ignore_watch": ["[\\/\\\\]\\./", "node_modules"],
+            "merge_logs": true,
+            "exec_interpreter": "node",
+            "env": {
+                "NODE_ENV": "development",
+                "port": 8080
+            }
+        }
+    ]
+}

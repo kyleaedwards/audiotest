@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+a,
+a:active,
+a:visited {
+    color: #a94455;
+}
