@@ -5,12 +5,12 @@
         var self = this;
         this.progressBar = document.getElementById('loading');
         this.fileUpload = form.getElementsByClassName('upload')[0];
-        this.remaining = form.getElementsByClassName('uploader-remaining')[0];
-        this.error = form.getElementsByClassName('uploader-error')[0];
+        //this.remaining = form.getElementsByClassName('uploader-remaining')[0];
+        //this.error = form.getElementsByClassName('uploader-error')[0];
         this.timer = false;
 
-        this.remaining.style.display = 'none';
-        this.error.style.display = 'none';
+        //this.remaining.style.display = 'none';
+        //this.error.style.display = 'none';
 
         this.fileUpload.addEventListener('change', function (e) {
 
@@ -20,9 +20,9 @@
                 bytesTotal = 0,
                 lastBytesLoaded = 0
 
-            self.error.style.display = 'none';
+            //self.error.style.display = 'none';
             self.progressBar.style.transform = 'scaleX(0)';
-            self.remaining.style.display = 'block';
+            //self.remaining.style.display = 'block';
 
             // get form data for POSTing
             var vFD = new FormData(form);
@@ -42,18 +42,18 @@
             }, false);
             oXHR.addEventListener('load', function (e) { // upload successfully finished
                 self.progressBar.style.transform = 'scaleX(1)';
-                self.remaining.innerHTML = '00:00:00 Remaining';
+                //self.remaining.innerHTML = '00:00:00 Remaining';
                 clearInterval(self.timer);
                 setTimeout(function () {
-                    self.progressBar.style.transform = 'scaleX(0)';
+                    window.location.reload();
                     self.progressBar.className = '';
                 }, 500);
             }, false);
             oXHR.addEventListener('error', function (e) { // upload error
                 self.progressBar.style.transform = 'scaleX(1)';
                 self.progressBar.className = 'error';
-                self.error.style.display = 'block';
-                self.remaining.style.display = 'none';
+                //self.error.style.display = 'block';
+                //self.remaining.style.display = 'none';
                 clearInterval(self.timer);
                 setTimeout(function () {
                     self.progressBar.style.transform = 'scaleX(0)';
@@ -67,7 +67,7 @@
 
             self.timer = setInterval(function () {
                 timeSpent += 500;
-                self.remaining.innerHTML = secondsToTime(((bytesTotal / bytesUploaded) * timeSpent - timeSpent) / 1000) + ' Remaining'; // 1/3
+                //self.remaining.innerHTML = secondsToTime(((bytesTotal / bytesUploaded) * timeSpent - timeSpent) / 1000) + ' Remaining'; // 1/3
             }, 500);
         });
     }
@@ -102,10 +102,10 @@
         controller.addEventListener('click', function () {
             if (playing) {
                 wavesurfer.pause();
-                controller.innerText = 'Play';
+                controller.innerHTML = '<i class="fa fa-play"></i>';
             } else {
                 wavesurfer.play();
-                controller.innerText = 'Pause';
+                controller.innerHTML = '<i class="fa fa-pause"></i>';
             }
             playing = !playing;
         });

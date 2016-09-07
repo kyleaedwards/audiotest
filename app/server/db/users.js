@@ -53,17 +53,17 @@ module.exports = function (db) {
             var escapeValues = [email, email]
             db.query(query, escapeValues, function (err, rows) {
                 if (err) {
-                    cb(err)
+                    cb(null, false)
                 } else if (rows && rows[0] && rows[0].hash) {
                     bcrypt.compare(password, rows[0].hash, function (err, res) {
                         if (err) {
-                            cb(err)
+                            cb(null, false)
                         } else {
                             cb(null, rows[0])
                         }
                     })
                 } else {
-                    cb('User not found.')
+                    cb(null, false)
                 }
             })
         }

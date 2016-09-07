@@ -38,24 +38,22 @@ mysql_database "#{node['app_name']}" do
 end
 
 # # copy db dump to local fs from shared drive
-# cookbook_file "/var/www/#{node['app']['app_name']}.sql" do
-#   source "#{node['app']['app_name']}.sql"
-#   owner "root"
-#   group "root"
-#   mode 00600
-#   action :create
-# end
+cookbook_file "/var/www/#{node['app_name']}.sql" do
+  source "#{node['app_name']}.sql"
+  owner "root"
+  group "root"
+  mode 00600
+  action :create
+end
 
 # # import db dump
-# bash "import" do
-#   user "root"
-#   cwd  "/var/www"
-#
-#   code <<-EOS
-#     mysql -u root -h 127.0.0.1 -p'#{node['app']['db_pass']}' heleo < /var/www/heleo.sql
-#   EOS
-#
-# end
+bash "import" do
+  user "root"
+  cwd  "/var/www"
+  code <<-EOS
+    mysql -u root -h 127.0.0.1 -p'#{node['db']['pass']}' #{node['app_name']} < /var/www/#{node['app_name']}.sql
+  EOS
+end
 
 # create a user capable of using dbs
 mysql_database_user node['app_name'] do

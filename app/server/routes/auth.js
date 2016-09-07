@@ -10,8 +10,8 @@ module.exports = function (app) {
         },
         function(email, password, done) {
             db.users.auth(email, password, function (err, user) {
-                if (err) { return done(err); }
-                if (!user) { return done('Invalid email.'); }
+                if (err) { return done(null, false); }
+                if (!user) { return done(null, false); }
                 return done(null, user);
             });
         }
