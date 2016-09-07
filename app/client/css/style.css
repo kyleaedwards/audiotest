@@ -3,8 +3,7 @@ body {
 }
 
 header {
-    padding: 15px 0;
-    text-align: center;
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -19,6 +18,11 @@ header h1 {
     font-size: 22px;
 }
 
+h1 a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
 header h2 {
     font-weight: 400;
     color: #8cabdc;
@@ -27,7 +31,79 @@ header h2 {
     margin: 0;
 }
 
+header p {
+    margin: 0;
+    float: right;
+    padding: 4px 0;
+}
+
 #mount {
-    margin: 25px auto 0;
-    width: 960px;
+    margin: 25px;
+}
+
+.uploader-component {
+
+}
+
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block;
+    width: 185px;
+    text-align: center;
+    background-color: #5877a7;
+    border-radius: 5px;
+    padding: 15px 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.file-upload:hover {
+    background-color: #435d86;
+}
+
+.file-upload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tr th {
+    border-bottom: solid 2px #aaa;
+}
+
+tr td {
+    border-bottom: solid 1px #ddd;
+}
+
+td, th {
+    border-right: solid 1px #ddd;
+    padding: 7px;
+}
+
+td:last-of-type, th:last-of-type {
+    border-right: none;
+}
+
+tr:last-of-type td {
+    border-bottom: none;
+}
+
+th {
+    text-align: left;
 }

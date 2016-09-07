@@ -10,6 +10,8 @@ depends "apt"
 depends "git"
 depends "tar"
 
+depends "redisio"
+
 depends "apache2"
 depends "ssl_certificate"
 depends "timezone-ii"

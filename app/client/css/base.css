@@ -19,3 +19,19 @@ a:active,
 a:visited {
     color: #a94455;
 }
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    background-color: #094;
+    transition: all 0.4s;
+    height: 4px;
+    transform: scaleX(0);
+    width: 100%;
+}
+
+#loading.error {
+    background-color: #900;
+}

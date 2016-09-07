@@ -25,3 +25,4 @@ var db = {
 }
 
 exports.users = require('./users')(db)
+exports.tracks = require('./tracks')(db)

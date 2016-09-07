@@ -3,9 +3,10 @@
         {
             "name": "app",
             "script": "./index.js",
-            "watch": true,
-            "usePolling": true,
-            "ignore_watch": ["[\\/\\\\]\\./", "node_modules"],
+            "watch": "./server",
+            "watch_options": {
+                "usePolling": true
+            },
             "merge_logs": true,
             "exec_interpreter": "node",
             "env": {

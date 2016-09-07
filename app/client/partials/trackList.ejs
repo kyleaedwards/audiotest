@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Filesize</th>
+        <th>Type</th>
+        <th>Date Created</th>
+    </tr>
+    <% tracks.forEach(function (track) { %>
+        <tr>
+            <td><a href="/track/<%= track.slug %>"><%= track.title %></a></td>
+            <td><%= viewUtils.filesize(track.filesize) %></td>
+            <td><%= track.type %></td>
+            <td><%= track.created_at %></td>
+        </tr>
+    <% }) %>
+</table>

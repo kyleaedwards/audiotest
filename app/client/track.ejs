@@ -1,0 +1,9 @@
+<% include ./partials/header %>
+
+<h1><%= track.title %></h1>
+<div class="track-player">
+    <div class="waveform" data-track="/uploads/<%= track.path.split('/').pop() %>"></div>
+    <a href="javascript:void(0);" class="track-control">Play</a>
+</div>
+
+<% include ./partials/footer %>

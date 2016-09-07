@@ -13,6 +13,7 @@ DEPENDENCIES
   nodejs (~> 2.4.4)
   php
   pm2
+  redisio (= 1.7.1)
   ssl_certificate
     git: https://github.com/onddo/ssl_certificate-cookbook
     revision: a4ca52f1ee04b64e66130029ba492f44d3892c50
@@ -51,6 +52,7 @@ GRAPH
     npm (>= 0.0.0)
     php (>= 0.0.0)
     pm2 (>= 0.0.0)
+    redisio (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
     tar (>= 0.0.0)
     timezone-ii (>= 0.0.0)
@@ -115,6 +117,8 @@ GRAPH
     build-essential (>= 0.0.0)
     openssl (>= 0.0.0)
   rbac (1.0.3)
+  redisio (1.7.1)
+    ulimit (>= 0.1.2)
   runit (2.0.0)
     packagecloud (>= 0.0.0)
     yum-epel (>= 0.0.0)
@@ -125,6 +129,7 @@ GRAPH
   ssl_certificate (1.13.0)
   tar (0.7.0)
   timezone-ii (0.2.9992)
+  ulimit (0.4.0)
   windows (1.44.3)
     chef_handler (>= 0.0.0)
   xml (2.0.0)

@@ -5,6 +5,7 @@
     <title>Cellout | Jailbreak your creativity.</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/base.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script>
     <% styles = typeof styles !== 'undefined' ? styles : ['style'] %>
     <% styles.forEach(function(style) { %>
         <link rel="stylesheet" href="/css/<%= style %>.css" />
@@ -13,9 +14,14 @@
 
 <body class="<%= typeof bodyClass != 'undefined' ? bodyClass : '' %>">
 
+<div id="loading"></div>
+
 <header>
-    <h1>Cellout</h1>
+    <h1><a href="/">Cellout</a></h1>
     <h2>Jailbreak your creativity.</h2>
+    <% if (typeof user != 'undefined' && user.id) { %>
+        <p>Logged in as <%= user.handle %>. <a href="/logout">Logout</a></p>
+    <% } %>
 </header>
 
 <main id="mount">

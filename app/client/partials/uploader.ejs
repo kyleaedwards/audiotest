@@ -1,0 +1,14 @@
+<div class="uploader-component show-uploader">
+    <form class="uploader" method="POST" action="/upload" enctype="multipart/form-data">
+        <h4>File Uploader</h4>
+        <p class="uploader-error">Something went wrong.</p>
+        <input type="hidden" name="user_id" value="<%= user.id %>" />
+        <div class="form-field">
+            <div class="file-upload btn btn-primary">
+                <span>Upload File</span>
+                <input type="file" name="upload" class="upload" />
+            </div>
+        </div>
+        <p class="uploader-remaining"></p>
+    </form>
+</div>

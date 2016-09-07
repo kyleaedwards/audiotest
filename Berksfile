@@ -7,6 +7,8 @@ cookbook "tar", git: 'https://github.com/gofullstack/tar-cookbook'
 cookbook 'apt'
 cookbook 'git', '= 4.1.0'
 
+cookbook 'redisio', '= 1.7.1'
+
 cookbook 'php'
 cookbook 'apache2', '~> 2.0.0'
 cookbook 'ssl_certificate', git: 'https://github.com/onddo/ssl_certificate-cookbook'
