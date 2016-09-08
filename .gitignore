@@ -43,3 +43,4 @@ jspm_packages
 .vagrant
 
 app/uploads
+app/build
