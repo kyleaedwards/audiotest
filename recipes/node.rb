@@ -34,5 +34,5 @@ end
 
 execute "start node app via PM2" do
   cwd "/var/www/#{node['app_name']}"
-  command "sudo node_modules/.bin/pm2 startOrRestart pm2.json"
+  command "sudo node_modules/pm2/bin/pm2 startOrRestart pm2.json"
 end
